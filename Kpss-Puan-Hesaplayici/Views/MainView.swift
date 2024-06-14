@@ -13,18 +13,20 @@ struct MainView: View {
             VStack {
                 List {
                     Section {
-                        HStack {
-                            Image(systemName: "1.circle")
-                                .resizable()
-                                .foregroundColor(.blue)
-                                .frame(width: 30, height: 30)
-                            Text("Ortaöğretim")
-                                .badge(
-                                    Text("P94")
-                                        .italic()
-                                )
+                        NavigationLink(destination: OrtaogretimView()) {
+                            HStack {
+                                Image(systemName: "1.circle")
+                                    .resizable()
+                                    .foregroundColor(.blue)
+                                    .frame(width: 30, height: 30)
+                                Text("Ortaöğretim")
+                                    .badge(
+                                        Text("P94")
+                                            .italic()
+                                    )
+                            }
                         }
-                        HStack {
+                        NavigationLink(destination: OnlisansView()) {
                             Image(systemName: "2.circle")
                                 .resizable()
                                 .foregroundColor(.blue)
@@ -35,7 +37,7 @@ struct MainView: View {
                                         .italic()
                                 )
                         }
-                        HStack {
+                        NavigationLink(destination: LisansView()) {
                             Image(systemName: "3.circle")
                                 .resizable()
                                 .foregroundColor(.blue)
@@ -46,7 +48,7 @@ struct MainView: View {
                                         .italic()
                                 )
                         }
-                        HStack {
+                        NavigationLink(destination: EgitimBilimleriView()) {
                             Image(systemName: "4.circle")
                                 .resizable()
                                 .foregroundColor(.blue)
@@ -57,7 +59,7 @@ struct MainView: View {
                                         .italic()
                                 )
                         }
-                        HStack {
+                        NavigationLink(destination: OABTView()) {
                             Image(systemName: "5.circle")
                                 .resizable()
                                 .foregroundColor(.blue)

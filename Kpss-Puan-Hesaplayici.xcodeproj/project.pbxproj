@@ -13,6 +13,11 @@
 		6418B5942C1CC795005BEFAC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418B5932C1CC795005BEFAC /* RootView.swift */; };
 		6418B5962C1CC79C005BEFAC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418B5952C1CC79C005BEFAC /* MainView.swift */; };
 		6418B5982C1CC7A0005BEFAC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6418B5972C1CC7A0005BEFAC /* ResultView.swift */; };
+		64BF75562C1CCEC80066F77D /* OABTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF75552C1CCEC80066F77D /* OABTView.swift */; };
+		64BF75582C1CCED50066F77D /* EgitimBilimleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF75572C1CCED50066F77D /* EgitimBilimleriView.swift */; };
+		64BF755A2C1CCEDD0066F77D /* LisansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF75592C1CCEDD0066F77D /* LisansView.swift */; };
+		64BF755C2C1CCEE80066F77D /* OnlisansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF755B2C1CCEE80066F77D /* OnlisansView.swift */; };
+		64BF755E2C1CCEF90066F77D /* OrtaogretimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF755D2C1CCEF90066F77D /* OrtaogretimView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		6418B5932C1CC795005BEFAC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		6418B5952C1CC79C005BEFAC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6418B5972C1CC7A0005BEFAC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		64BF75552C1CCEC80066F77D /* OABTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OABTView.swift; sourceTree = "<group>"; };
+		64BF75572C1CCED50066F77D /* EgitimBilimleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgitimBilimleriView.swift; sourceTree = "<group>"; };
+		64BF75592C1CCEDD0066F77D /* LisansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LisansView.swift; sourceTree = "<group>"; };
+		64BF755B2C1CCEE80066F77D /* OnlisansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlisansView.swift; sourceTree = "<group>"; };
+		64BF755D2C1CCEF90066F77D /* OrtaogretimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrtaogretimView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 		6418B5822C1CC76B005BEFAC /* Kpss-Puan-Hesaplayici */ = {
 			isa = PBXGroup;
 			children = (
+				64BF75542C1CCEB40066F77D /* ViewModels */,
 				6418B59A2C1CC7B1005BEFAC /* Views */,
 				6418B5992C1CC7A7005BEFAC /* Resources */,
 				6418B5892C1CC76C005BEFAC /* Preview Content */,
@@ -87,6 +98,18 @@
 				6418B5972C1CC7A0005BEFAC /* ResultView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		64BF75542C1CCEB40066F77D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				64BF75552C1CCEC80066F77D /* OABTView.swift */,
+				64BF75572C1CCED50066F77D /* EgitimBilimleriView.swift */,
+				64BF75592C1CCEDD0066F77D /* LisansView.swift */,
+				64BF755B2C1CCEE80066F77D /* OnlisansView.swift */,
+				64BF755D2C1CCEF90066F77D /* OrtaogretimView.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +182,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BF755A2C1CCEDD0066F77D /* LisansView.swift in Sources */,
 				6418B5942C1CC795005BEFAC /* RootView.swift in Sources */,
 				6418B5982C1CC7A0005BEFAC /* ResultView.swift in Sources */,
 				6418B5962C1CC79C005BEFAC /* MainView.swift in Sources */,
+				64BF755E2C1CCEF90066F77D /* OrtaogretimView.swift in Sources */,
+				64BF75562C1CCEC80066F77D /* OABTView.swift in Sources */,
 				6418B5842C1CC76B005BEFAC /* Kpss_Puan_HesaplayiciApp.swift in Sources */,
+				64BF75582C1CCED50066F77D /* EgitimBilimleriView.swift in Sources */,
+				64BF755C2C1CCEE80066F77D /* OnlisansView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
