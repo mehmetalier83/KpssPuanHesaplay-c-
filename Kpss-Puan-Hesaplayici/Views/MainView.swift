@@ -69,10 +69,11 @@ struct MainView: View {
                                 )
                         }
                     } header: {
-                        Text("Bölüm Seçiniz")
+                        Text("BÖLÜM SEÇİNİZ")
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
             .navigationTitle("Kpss Puan Hesaplama")
         }
     }
