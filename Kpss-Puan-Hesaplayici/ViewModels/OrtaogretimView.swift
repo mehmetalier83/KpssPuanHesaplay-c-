@@ -8,56 +8,63 @@
 import SwiftUI
 
 struct OrtaogretimView: View {
-    @State private var gKDogruSayisi  : Double = 50
-    @State private var gkYanlisSayisi : Double = 0
-    @State private var gyDogruSayisi  : Double = 50
-    @State private var gyYanlisSayisi : Double = 0
-    @State private var sonuc          : Double = 0
-    
+    @State private var gKDogruSayisi: Double = 30
+    @State private var gkYanlisSayisi: Double = 0
+    @State private var gyDogruSayisi: Double = 30
+    @State private var gyYanlisSayisi: Double = 0
+    @State private var sonuc: Double = 0
+
     var body: some View {
         VStack {
             Form {
                 Section {
-                    Stepper("Doğru Sayısı: \(gKDogruSayisi,specifier: "%0.f")", value: $gKDogruSayisi, in: 0...60) { _ in
+                    Stepper("Doğru Sayısı: \(gKDogruSayisi, specifier: "%0.f")", value: $gKDogruSayisi, in: 0...60) { _ in
                         impactFeedback()
                     }
+                    .bold()
 
-                    Stepper("Yanlış Sayısı: \(gkYanlisSayisi,specifier: "%0.f")", value: $gkYanlisSayisi, in: 0...60) {
-                        _ in
+                    Stepper("Yanlış Sayısı: \(gkYanlisSayisi, specifier: "%0.f")", value: $gkYanlisSayisi, in: 0...60) { _ in
                         impactFeedback()
                     }
-
+                    .bold()
                 } header: {
                     Text("Genel Kültür")
                         .textCase(.none)
-                }footer: {
-                    if(gKDogruSayisi + gkYanlisSayisi > 60) {
+                } footer: {
+                    if gKDogruSayisi + gkYanlisSayisi > 60 {
                         Text("Toplam doğru ve yanlış sayıları 60'ı geçemez.")
                             .foregroundStyle(.red)
                     }
                 }
                 Section {
-                    Stepper("Doğru Sayısı: \(gyDogruSayisi,specifier: "%0.f")", value: $gyDogruSayisi, in: 0...60) { _ in
+                    Stepper("Doğru Sayısı: \(gyDogruSayisi, specifier: "%0.f")", value: $gyDogruSayisi, in: 0...60) { _ in
                         impactFeedback()
                     }
-                    Stepper("Yanlış Sayısı: \(gyYanlisSayisi,specifier: "%0.f")", value: $gyYanlisSayisi, in: 0...60) { _ in
+                    .bold()
+                    Stepper("Yanlış Sayısı: \(gyYanlisSayisi, specifier: "%0.f")", value: $gyYanlisSayisi, in: 0...60) { _ in
                         impactFeedback()
                     }
-
+                    .bold()
                 } header: {
                     Text("Genel Yetenek")
                         .textCase(.none)
                 } footer: {
-                    if(gyDogruSayisi + gyYanlisSayisi > 60) {
+                    if gyDogruSayisi + gyYanlisSayisi > 60 {
                         Text("Toplam doğru ve yanlış sayıları 60'ı geçemez.")
                             .foregroundStyle(.red)
                     }
                 }
                 Section {
-                    Text("Kpss Puanı:")
+                    Text("Kpss Puanı:\(sonuc, specifier: "%.3f")")
+                        .bold()
                     HesaplaButton(title: "Hesapla") {
-                        print("Printlendin")
+                        let gkNet = gKDogruSayisi - (gkYanlisSayisi / 4)
+                        let gYNet = gyDogruSayisi - (gyYanlisSayisi / 4)
+                        withAnimation {
+                            sonuc = 55.839 + gYNet * 0.348 + gkNet * 0.431
+                        }
                     }
+
                     .disabled(formKontrol)
                 } header: {
                     Text("Sonuç")
@@ -67,18 +74,19 @@ struct OrtaogretimView: View {
         }
         .scrollContentBackground(.hidden)
         .navigationTitle("Ortaöğretim")
-        var formKontrol : Bool {
-            if ((gyDogruSayisi + gyYanlisSayisi) > 60 || (gKDogruSayisi + gkYanlisSayisi) > 60){
-             return   true
-            }
-            return false
-        }
     }
+
+    var formKontrol: Bool {
+        if gyDogruSayisi + gyYanlisSayisi > 60 || gKDogruSayisi + gkYanlisSayisi > 60 {
+            return true
+        }
+        return false
+    }
+
     func impactFeedback() {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
     }
- 
 }
 
 struct OrtaogretimView_Previews: PreviewProvider {
