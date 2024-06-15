@@ -11,7 +11,9 @@ struct ResultView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Sonuçlar")
+                List(0 ..< 50) { item in
+                    Text("Sonuçlar \(item)")
+                }
             }
             .navigationTitle("Sonuçlar")
 

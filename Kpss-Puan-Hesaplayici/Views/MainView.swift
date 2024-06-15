@@ -17,7 +17,6 @@ struct MainView: View {
                             HStack {
                                 Image(systemName: "1.circle")
                                     .resizable()
-                                    .foregroundColor(.blue)
                                     .frame(width: 30, height: 30)
                                 Text("Ortaöğretim")
                                     .badge(
@@ -29,7 +28,6 @@ struct MainView: View {
                         NavigationLink(destination: OnlisansView()) {
                             Image(systemName: "2.circle")
                                 .resizable()
-                                .foregroundColor(.blue)
                                 .frame(width: 30, height: 30)
                             Text("Önlisans")
                                 .badge(
@@ -40,7 +38,6 @@ struct MainView: View {
                         NavigationLink(destination: LisansView()) {
                             Image(systemName: "3.circle")
                                 .resizable()
-                                .foregroundColor(.blue)
                                 .frame(width: 30, height: 30)
                             Text("Lisans(B Grubu)")
                                 .badge(
@@ -51,7 +48,6 @@ struct MainView: View {
                         NavigationLink(destination: EgitimBilimleriView()) {
                             Image(systemName: "4.circle")
                                 .resizable()
-                                .foregroundColor(.blue)
                                 .frame(width: 30, height: 30)
                             Text("Eğitim Bilimleri")
                                 .badge(
@@ -62,7 +58,6 @@ struct MainView: View {
                         NavigationLink(destination: OABTView()) {
                             Image(systemName: "5.circle")
                                 .resizable()
-                                .foregroundColor(.blue)
                                 .frame(width: 30, height: 30)
                             Text("ÖABT")
                                 .badge(
