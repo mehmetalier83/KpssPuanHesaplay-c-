@@ -18,10 +18,12 @@ struct MainView: View {
                                 Image(systemName: "1.circle")
                                     .resizable()
                                     .frame(width: 30, height: 30)
+                                    .foregroundStyle(Color("mainColor"))
                                 Text("Ortaöğretim")
                                     .badge(
                                         Text("P94")
                                             .italic()
+                                            .foregroundColor(Color("mainColor"))
                                     )
                             }
                         }
@@ -29,39 +31,51 @@ struct MainView: View {
                             Image(systemName: "2.circle")
                                 .resizable()
                                 .frame(width: 30, height: 30)
+                                .foregroundStyle(Color("mainColor"))
+
                             Text("Önlisans")
                                 .badge(
                                     Text("P93")
                                         .italic()
+                                        .foregroundColor(Color("mainColor"))
                                 )
                         }
                         NavigationLink(destination: LisansView()) {
                             Image(systemName: "3.circle")
                                 .resizable()
                                 .frame(width: 30, height: 30)
+                                .foregroundStyle(Color("mainColor"))
+
                             Text("Lisans(B Grubu)")
                                 .badge(
                                     Text("P3")
                                         .italic()
+                                        .foregroundColor(Color("mainColor"))
                                 )
                         }
                         NavigationLink(destination: EgitimBilimleriView()) {
                             Image(systemName: "4.circle")
                                 .resizable()
                                 .frame(width: 30, height: 30)
+                                .foregroundStyle(Color("mainColor"))
+
                             Text("Eğitim Bilimleri")
                                 .badge(
                                     Text("P10")
                                         .italic()
+                                        .foregroundColor(Color("mainColor"))
                                 )
                         }
                         NavigationLink(destination: OABTView()) {
                             Image(systemName: "5.circle")
                                 .resizable()
                                 .frame(width: 30, height: 30)
+                                .foregroundStyle(Color("mainColor"))
+
                             Text("ÖABT")
                                 .badge(
                                     Text("P121")
+                                        .foregroundColor(Color("mainColor"))
                                         .italic()
                                 )
                         }
@@ -72,6 +86,7 @@ struct MainView: View {
             }
             .scrollContentBackground(.hidden)
             .navigationTitle("Kpss Puan Hesaplama")
+            
         }
     }
 }

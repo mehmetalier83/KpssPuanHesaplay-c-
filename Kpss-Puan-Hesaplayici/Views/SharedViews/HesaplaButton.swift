@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct HesaplaButton: View {
+    
+    let title : String
+    let action : () -> Void
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            action()
+        } label: {
+            Text(title)
+                .bold()
+                .font(.title3)
+                .padding(8)
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.borderedProminent)
+
     }
 }
 
 struct HesaplaButton_Previews: PreviewProvider {
     static var previews: some View {
-        HesaplaButton()
+        HesaplaButton(title: "Hesapla", action: {
+            print("Butona basıldı.")
+        })
     }
 }

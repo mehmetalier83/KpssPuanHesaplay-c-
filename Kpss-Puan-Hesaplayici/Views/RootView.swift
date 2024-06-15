@@ -25,7 +25,7 @@ struct RootView: View {
                 }
                 .tag(1)
         }
-        .tint(.purple)
+        .tint(Color("mainColor"))
        
     }
 }
